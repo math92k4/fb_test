@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfc46;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#text_container {
+  position: relative;
+  opacity: 0.9;
+  justify-content: center;
+  display: flex;
+  width: 200px;
+}
+
+.text {
+  position: absolute;
+  height: 40px;
+  top: 30vh;
+  animation-name: kf_move;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.65, 0.01, 0.31, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.text p {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px #fbfc46;
+
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+.text1 {
+  opacity: 0.066;
+  animation-delay: 1.05s;
+}
+.text2 {
+  opacity: 0.132;
+  animation-delay: 0.98s;
+}
+.text3 {
+  opacity: 0.198;
+  animation-delay: 0.91s;
+}
+.text4 {
+  opacity: 0.264;
+  animation-delay: 0.84s;
+}
+.text5 {
+  opacity: 0.33;
+  animation-delay: 0.77s;
+}
+
+.text6 {
+  opacity: 0.396;
+  animation-delay: 0.7s;
+}
+
+.text7 {
+  opacity: 0.462;
+  animation-delay: 0.63s;
+}
+
+.text8 {
+  opacity: 0.528;
+  animation-delay: 0.56s;
+}
+
+.text9 {
+  opacity: 0.594;
+  animation-delay: 0.49s;
+}
+
+.text10 {
+  opacity: 0.66;
+  animation-delay: 0.42s;
+}
+
+.text11 {
+  opacity: 0.726;
+  animation-delay: 0.35s;
+}
+
+.text12 {
+  opacity: 0.792;
+  animation-delay: 0.28s;
+}
+
+.text13 {
+  opacity: 0.858;
+  animation-delay: 0.21s;
+}
+
+.text14 {
+  opacity: 0.924;
+  animation-delay: 0.14s;
+}
+
+.text15 {
+  opacity: 0.99;
+  animation-delay: 0.07s;
+}
+
+.main_text p {
+  -webkit-text-fill-color: #fbfc46;
+  -webkit-text-stroke: 1px #fbfc46;
+}
+
+@keyframes kf_move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20vh);
+  }
+}
+
+/* 
+ *
+ *
+ *
+ * LOGO
+ */
+
+#logo_container {
+  position: relative;
+  top: 60vh;
+  width: 170px;
+  height: 100px;
+}
+
+#logo_container .logo {
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  animation-name: kf_logo;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#logo_container .main_logo {
+  opacity: 0.7;
+}
+#logo_container .logo_fx2 {
+  opacity: 0.3;
+  animation-delay: 0.1s;
+}
+
+#logo_container .logo_fx3 {
+  opacity: 0.3;
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+}
+
+#logo_container .logo_fx1 {
+  opacity: 0.3;
+  animation-delay: 0.3s;
+  animation-duration: 0.5s;
+}
+
+@keyframes kf_logo {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  10% {
+    transform: translateY(0.1px) translateX(0.2px);
+  }
+  20% {
+    transform: translateY(-0.3px) translateX(0.2px);
+  }
+  30% {
+    transform: translateY(-0.3px) translateX(-0.6px);
+  }
+  40% {
+    transform: translateY(0px) translateX(0.4px);
+  }
+  50% {
+    transform: translateY(0.4px) translateX(0.2px);
+  }
+  60% {
+    transform: translateY(-0.2px) translateX(-0.4px);
+  }
+
+  70% {
+    transform: translateY(-0.1px) translateX(-0.2px);
+  }
+
+  80% {
+    transform: translateY(0px) translateX(0.2px);
+  }
+
+  90% {
+    transform: translateY(0.2px) translateX(0.4px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* 
+ *
+ *
+ *
+ * OVERLAY
+ */
+
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: url("imgs/texture_overlay.png");
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.7;
+}
+
+/* 
+ *
+ *
+ *
+ * SOME
+ */
+
+#some_container {
+  position: absolute;
+  width: 250px;
+  top: 70vh;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.9;
+}
+#face {
+  width: 40px;
+  height: 40px;
+  background-image: url("imgs/face.svg");
+}
+
+#tuben {
+  width: 40px;
+  height: 40px;
+  background-image: url("imgs/tuben.svg");
+}
+
+#insta {
+  width: 40px;
+  height: 40px;
+  background-image: url("imgs/inst.svg");
+}
