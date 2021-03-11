@@ -251,18 +251,21 @@ section {
   width: 40px;
   height: 40px;
   background-image: url("imgs/face.svg");
+  cursor: pointer;
 }
 
 #tuben {
   width: 40px;
   height: 40px;
   background-image: url("imgs/tuben.svg");
+  cursor: pointer;
 }
 
 #insta {
   width: 40px;
   height: 40px;
   background-image: url("imgs/inst.svg");
+  cursor: pointer;
 }
 
 /*
@@ -294,8 +297,7 @@ section {
   pointer-events: none;
 }
 
-.s_ani1 .smiley,
-.s_ani4 .smiley {
+.s_ani1 .smiley {
   animation-name: kf_s_ani1_x;
   animation-duration: 2s;
   animation-iteration-count: 1;

@@ -2,6 +2,7 @@
 
 let y;
 let x;
+let smileyTimer;
 
 window.onmousemove = function (event) {
   x = event.clientX;
@@ -13,8 +14,12 @@ let smileyTime = false;
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  document.querySelector(".main_logo").addEventListener("mouseover", startSmileys);
-  document.querySelector(".main_logo").addEventListener("mouseleave", stopSmileys);
+  const someBtns = document.querySelectorAll("#some_container div");
+
+  someBtns.forEach((btn) => {
+    btn.addEventListener("mouseover", startSmileys);
+    btn.addEventListener("mouseleave", stopSmileys);
+  });
 }
 
 function startSmileys() {
@@ -27,6 +32,7 @@ function startSmileys() {
 
 function stopSmileys() {
   smileyTime = false;
+  clearTimeout(smileyTimer);
   console.log("stop");
 }
 
@@ -34,6 +40,7 @@ function throwSmiley() {
   if (smileyTime === true) {
     const smileyCont = document.createElement("div");
     const randomClass = getRandomClass();
+
     smileyCont.classList.add(`smiley_container`);
     smileyCont.classList.add(`${randomClass}`);
 
@@ -49,7 +56,7 @@ function throwSmiley() {
 
     document.querySelector("#smiley_layer").appendChild(smileyCont);
 
-    setTimeout(throwSmiley, 200);
+    smileyTimer = setTimeout(throwSmiley, 200);
   }
 }
 
