@@ -20,10 +20,14 @@ section {
 
 #text_container {
   position: relative;
-  opacity: 0.9;
+  opacity: 0;
   justify-content: center;
   display: flex;
   width: 200px;
+
+  animation-name: get_in;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
 }
 
 .text {
@@ -107,13 +111,17 @@ section {
 }
 
 .text14 {
-  opacity: 0.924;
+  opacity: 0.87;
   animation-delay: 0.14s;
 }
 
 .text15 {
-  opacity: 0.99;
+  opacity: 0.9;
   animation-delay: 0.07s;
+}
+
+.main_text {
+  opacity: 0.9;
 }
 
 .main_text p {
@@ -142,6 +150,11 @@ section {
   top: 60vh;
   width: 170px;
   height: 45px;
+  animation-name: get_in_2;
+  animation-duration: 0.8s;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
 }
 
 #logo_container .logo {
@@ -212,6 +225,70 @@ section {
   }
 }
 
+/* .logo #r1 path {
+  animation-name: kf_r1;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.75, 0.01, 0.17, 1.06);
+}
+
+@keyframes kf_r1 {
+  0% {
+    d: path("M165.5,29.5c0-16.3-38.8-29.5-52-29.5v59C126.8,59,165.5,45.8,165.5,29.5z");
+  }
+
+  100% {
+    d: path("M205.5,29.5c0-16.29-10.75-29.5-24-29.5V59C194.75,59,205.5,45.79,205.5,29.5Z");
+  }
+}
+
+.logo #r2 path {
+  animation-name: kf_r2;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.75, 0.01, 0.17, 1.06);
+}
+
+@keyframes kf_r2 {
+  0% {
+    d: path("M165.5,29.5c0-16.3-38.8-29.5-52-29.5v59C126.8,59,165.5,45.8,165.5,29.5z");
+  }
+
+  100% {
+    d: path("M225.5,29.5c0-16.3-4.5-29.5-10-29.5v59C221,59,225.5,45.8,225.5,29.5z");
+  }
+}
+
+.logo #l1 path {
+  animation-name: kf_l1;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.75, 0.01, 0.17, 1.06);
+}
+
+@keyframes kf_l1 {
+  0% {
+    d: path("M61.5,29.5c0,16.3,38.8,29.5,52,29.5V0C100.2,0,61.5,13.2,61.5,29.5z");
+  }
+
+  100% {
+    d: path("M21,29.5C21,45.8,31.8,59,45,59V0C31.8,0,21,13.2,21,29.5z");
+  }
+}
+
+.logo #l2 path {
+  animation-name: kf_l2;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.75, 0.01, 0.17, 1.06);
+}
+
+@keyframes kf_l2 {
+  0% {
+    d: path("M61.5,29.5c0,16.3,38.8,29.5,52,29.5V0C100.2,0,61.5,13.2,61.5,29.5z");
+  }
+
+  100% {
+    d: path("M0,29.5C0,45.8,4.5,59,10,59V0C4.5,0,0,13.2,0,29.5z");
+  }
+} */
+
 /* 
  *
  *
@@ -245,13 +322,20 @@ section {
   top: 70vh;
   display: flex;
   justify-content: space-around;
-  opacity: 0.9;
+
+  opacity: 0;
+  animation-name: get_in_2;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+
+  animation-delay: 0.6s;
 }
 #face {
   width: 40px;
   height: 40px;
   background-image: url("imgs/face.svg");
   cursor: pointer;
+  opacity: 0.9;
 }
 
 #tuben {
@@ -259,6 +343,7 @@ section {
   height: 40px;
   background-image: url("imgs/tuben.svg");
   cursor: pointer;
+  opacity: 0.9;
 }
 
 #insta {
@@ -266,6 +351,7 @@ section {
   height: 40px;
   background-image: url("imgs/inst.svg");
   cursor: pointer;
+  opacity: 0.9;
 }
 
 /*
@@ -422,5 +508,25 @@ section {
 
   100% {
     transform: translateY(50vh);
+  }
+}
+
+@keyframes get_in_2 {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@keyframes get_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

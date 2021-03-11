@@ -56,7 +56,7 @@ function throwSmiley() {
 
     document.querySelector("#smiley_layer").appendChild(smileyCont);
 
-    smileyTimer = setTimeout(throwSmiley, 200);
+    smileyTimer = setTimeout(throwSmiley, 400);
   }
 }
 
