@@ -2,20 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 body {
   background-color: #fbfc46;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 section {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: #fbfc46;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#splash_section {
+  background-color: rgb(12, 12, 12);
 }
 
 #text_container {
@@ -191,19 +200,19 @@ section {
     transform: translateY(0px) translateX(0px);
   }
   10% {
-    transform: translateY(0.1px) translateX(0.2px);
+    transform: translateY(1px) translateX(0.5px);
   }
   20% {
-    transform: translateY(-0.3px) translateX(0.2px);
+    transform: translateY(-1px) translateX(-1px);
   }
   30% {
-    transform: translateY(-0.3px) translateX(-0.6px);
+    transform: translateY(-0.5px) translateX(0.6px);
   }
   40% {
-    transform: translateY(0px) translateX(0.4px);
+    transform: translateY(0px) translateX(1px);
   }
   50% {
-    transform: translateY(0.4px) translateX(0.2px);
+    transform: translateY(2px) translateX(0.2px);
   }
   60% {
     transform: translateY(-0.2px) translateX(-0.4px);
@@ -297,16 +306,52 @@ section {
  */
 
 #overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  background-image: url("imgs/texture_overlay.png");
+
   background-position: center;
   background-repeat: repeat;
-  opacity: 0.7;
+
+  overflow: hidden;
+}
+
+#overlay::after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: -50%;
+  top: -50%;
+  background-image: url("imgs/grains.png");
+  opacity: 0.8;
+
+  animation: kf_grain 0.3s steps(5) infinite;
+}
+
+@keyframes kf_grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(-5%, -10%);
+  }
+  40% {
+    transform: translate(5%, -15%);
+  }
+
+  60% {
+    transform: translate(-12%, 9%);
+  }
+
+  80% {
+    transform: translate(7%, -2%);
+  }
 }
 
 /* 

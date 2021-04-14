@@ -14,7 +14,7 @@ let smileyTime = false;
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  const someBtns = document.querySelectorAll("#some_container div");
+  const someBtns = document.querySelectorAll("#some_container a");
 
   someBtns.forEach((btn) => {
     btn.addEventListener("mouseover", startSmileys);
