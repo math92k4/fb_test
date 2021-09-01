@@ -24,7 +24,7 @@ section {
 }
 
 #splash_section {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(16, 16, 16);
 }
 
 #text_container {
@@ -327,7 +327,7 @@ section {
   left: -50%;
   top: -50%;
   background-image: url("imgs/grains.png");
-  opacity: 0.8;
+  opacity: 0.7;
 
   animation: kf_grain 0.3s steps(5) infinite;
 }
